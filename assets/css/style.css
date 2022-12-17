@@ -2,64 +2,135 @@
     --blue:rgb(75, 181, 170);
     --grey:#333;
 }
-* {
-    box-sizing: border-box;
+*{
+    box-sizing:border-box;
 }
-body {
-    font-family: Arial;
+html{
+    width:100%;
+    height:100%;
+}
+body{
+    width:100%;
+    height:100%;
+}
+body{
     margin: 0;
-    min-height: 100vh;
-    display:flex;
-    flex-direction:column;
-    justify-content:flex-start;
-  }
-header{
-    background: var(--grey);
-    padding-left:0px;
-    padding-right:40px;
-    padding-top:20px;
-    padding-bottom:20px;
+    font-size: 16px;
+    font-family: system-ui;
+    color:white;
+    background:white;
+    overflow:hidden;
 }
-
-main{
-    background-color:#fff;
-    text-align: left;
-}
-footer {
-    flex-shrink: 0;
-    padding: 20px;
-    text-align: left;
-    background-color:#fff;
-    color:var(--grey);
-    margin-top: auto;
-}
-section h1 {
-    font-size: 30px;
-} 
-
-.container {
-    display:flex;
-    flex: 0 0;
-    position: relative;
+h1{
+    font-weight: normal;
     text-align: center;
-    color: white;
-  }
+}
+p{
+    margin: 0 0 0 0;
+}
+#main{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-flow: row;
+    height: 10vh;
+}
+#main2{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-flow: row;
+    height: 50vh;
+}
+/* header, */
+
+#main > article,
+#main > nav,
+#main > aside,
+#main2 > article,
+#main2 > nav,
+#main2 > aside{
+    
+    margin-top: 10px;
+    padding: 0;
+    /* border: 5px solid black; */
+}
+footer{
+    margin-top:10px;
+    padding:20px;
+}
+
+#main > article, #main2 > article {
+    color: var(--grey);
+    padding-top:5px;
+    padding-left:10px;
+    padding-right:10px;
+    background: #fff;
+    flex: 8 1 0;
+    order: 2;
+}
+#main > nav,
+/* #main > aside, */
+#main2 > nav{
+/* #main2 > aside{ */
+    font-size: 25px;
+    text-align: right;
+    border-right: 5px solid var(--grey);
+    padding-right:10px;
+    color: var(--grey);
+    background: #fff; 
+    flex: 2 6 0;
+}
+#main > aside, 
+#main2 > aside{
+    background: #fff; 
+    flex: 1 6 0;
+}
+}
+
+#main > nav,
+#main2 > nav{
+    order: 1;
+}
+#main > aside,
+#main2 > aside{
+    order: 3;
+}
+#main > nav > p {
+    font-size:10px;
+    display:none;
+}
+header{
+    display: block;
+    min-height: 200px;
+}
+footer{
+    display: block;
+    min-height: 200px;
+    background-color:#fff;
+}
+header{
+    background-image: url("/Users/darrenmedrano/Desktop/bootcamp-UTA/challenges/UTA-bootcamp-challenge-2/assets/images/banner.png");
+}
 .bannerText {
-    position: absolute;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+  }
+.bannerText > h1{
     padding:10px;
     background-color: var(--blue);
     color: var(--grey);
-    font-size:30px;
-    bottom: 30px;
-    right: 75px;
+    /* position: relative; */
+    margin-right:65px;
   }
-.topnav h1 {
+/* .topnav h1 {
     background-color: turquoise;
     text-align: left;
     padding-left:0;
     padding-right:100px;
     bottom: 20px;
-}
+} */
 
 .topnav {
     overflow: hidden;
@@ -94,10 +165,12 @@ section h1 {
     color: var(--grey);
     padding-right: 10px;
     padding-left: 60px;
-    padding-top:5px;
-    padding-bottom: 5px;
+    padding-top:2px;
+    padding-bottom: 2px;
     background-color:var(--blue);
     float: left;
+    margin-top:10px;
+    margin-bottom:10px;
 
 }
 
@@ -105,9 +178,197 @@ section h1 {
     background-color: #ddd;
     color: black;
 }
+.item-1 {
+        width: 96%;
+        height: 200px;
+        margin: 5px;
+        border: 5px solid var(--blue);
+        background-image: url("/Users/darrenmedrano/Desktop/bootcamp-UTA/challenges/UTA-bootcamp-challenge-2/assets/images/tower.png");
 
-@media screen and (max-width:768px){
-    .topnav div.navlinks{
-        margin: 100px 100px 0 0 ;
+
     }
+
+.item-2 , .item-3 , .item-4 , .item-5{
+        width: 47.65%;
+        height: 100px;
+        border: 5px solid var(--blue);
+        margin:5px;
+
+    }
+.item-2{
+    background-image: url("/Users/darrenmedrano/Desktop/bootcamp-UTA/challenges/UTA-bootcamp-challenge-2/assets/images/arch.png");
 }
+.item-3{
+    background-image: url("/Users/darrenmedrano/Desktop/bootcamp-UTA/challenges/UTA-bootcamp-challenge-2/assets/images/city.png");
+}
+.item-4{
+    background-image: url("/Users/darrenmedrano/Desktop/bootcamp-UTA/challenges/UTA-bootcamp-challenge-2/assets/images/tree.png");
+}
+.item-5{
+    background-image: url("/Users/darrenmedrano/Desktop/bootcamp-UTA/challenges/UTA-bootcamp-challenge-2/assets/images/dog.png");
+}
+.container{
+    display:flex;
+    flex-wrap: wrap;
+
+}
+.contactMe{
+    margin:0;
+    padding-top:20px;
+    display:flex;
+    color: var(--grey);
+}
+
+.contactMe h1 {
+    text-align:right;
+    margin-top:0;
+    font-size:25px;
+    padding-left:235px;
+    padding-right:10px;
+    padding-top: 5px;
+    padding-bottom:0px;
+    border-right: solid 5px var(--grey);
+}
+footer > .contactMe > ul > li {
+    display:flex;
+    display: inline;
+    margin-left: 70px;
+    margin-right: 70px;
+    padding:3px;
+    border-bottom: 3px solid var(--grey);
+}
+@media all and (max-width: 1200px){
+
+    .item-2 , .item-3 , .item-4 , .item-5 {
+        width: 47%;
+        height: 120px;
+        border: 5px solid var(--blue);
+        margin:4px;
+    }
+        .contactMe h1 {
+            text-align:right;
+            margin-top:0;
+            font-size:19px;
+            padding-left:0px;
+            padding-right:10px;
+            padding-top: 5px;
+            padding-bottom:0px;
+            border-right: solid 5px var(--grey);
+        }
+        footer > .contactMe > ul > li {
+            margin:20px;
+            display: column;
+        }
+    }
+
+
+    /* .item-1 {
+        height:180px;
+      }
+      .item-1 {
+        width: 98%;
+        height: 180px;
+        margin: 4px;
+        border: 5px solid var(--blue);
+    }
+
+.item-2 , .item-3 , .item-4 , .item-5 {
+        width: 38%;
+        height: 80px;
+        border: 5px solid var(--blue);
+        margin:4px;
+
+    } */
+
+
+/* @media all and (max-width: 600px){
+
+    #main, #page{
+        flex-flow: column;
+    }
+    #main > article, #main > nav, #main > aside{
+        order: 0;
+    }
+    #main > nav, #main > aside, header, footer{
+        min-height: 50px;
+    }
+    #main2, #page{
+        flex-flow: column;
+    }
+    #main2 > article, #main2 > nav, #main2 > aside{
+        order: 0;
+    }
+    #main2 > nav, #main2 > aside, header, footer{
+        min-height: 50px;
+    }
+    header{
+        display: block;
+        min-height: 200px;
+    }
+    footer{
+        display: block;
+        min-height: 100px;
+    }
+    .bannerText{
+        justify-content:space-evenly;
+    }
+    .bannerText > h1{
+        padding:10px;
+        background-color: var(--blue);
+        color: var(--grey);
+        margin-right:0px;
+      }
+
+      #main > nav{
+
+          font-size: 25px;
+          text-align: left;
+          border-right: 0px;
+
+          padding-right:10px;
+          color: var(--grey);
+          background: #fff; 
+          flex: 1 6 0;
+      }
+      #main2 > nav{
+      font-size: 25px;
+      text-align: center;
+      border-right: 0px;
+      padding-right:10px;
+      padding-bottom:30px;
+      color: var(--grey);
+      background: #fff; 
+      flex: 1 6 0;
+  }
+      #main > article,
+      #main > aside,
+      #main2 > aside,{
+        display:none;
+      }
+
+      #main > nav > p {
+        border-top: 5px solid var(--grey);
+        font-size:10px;
+        display:flex;
+        flex-direction:column;
+        
+}
+
+
+      .item-1 {
+        height:180px;
+      }
+      .item-1 {
+        width: 98%;
+        height: 180px;
+        margin: 4px;
+        border: 5px solid var(--blue);
+    }
+
+.item-2 , .item-3 , .item-4 , .item-5 {
+        width: 48%;
+        height: 80px;
+        border: 5px solid var(--blue);
+        margin:4px;
+
+    } */
