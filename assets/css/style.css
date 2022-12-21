@@ -13,7 +13,9 @@ body{
     flex-direction: column;
 
 }
+
 /* header/ navigation bar */
+
 #header{ 
     display:flex;
     flex-direction: column;
@@ -69,6 +71,7 @@ body{
     color: var(--blue);
     font-size:20px;
     line-height: 20px;
+    text-decoration: none;
     padding-bottom: 5px;
     border-bottom: 5px solid var(--blue);
     margin-top:50px;
@@ -86,6 +89,7 @@ body{
     color: var(--blue);
     font-size:20px;
     line-height: 20px;
+    text-decoration: none;
     padding-bottom: 5px;
     border-bottom: 5px solid var(--blue);
     margin-top:50px;
@@ -105,7 +109,6 @@ body{
     color: var(--blue);
     font-size:20px;
     line-height: 20px;
-    /* text-decoration: underline; */
     padding-bottom: 5px;
     border-bottom: 5px solid var(--blue);
     margin-top:50px;
@@ -141,7 +144,8 @@ body{
 }
 
 
-  /*main */
+/*main - ABOUT ME SECTION */
+
   #article{
     display:flex;
     flex-direction: row;
@@ -171,9 +175,11 @@ body{
  #paragraph{
     padding-left:20px;
     color: var(--grey);
- }
+}
+
 
 /* photo gallery */
+
 #main-photo{
     display:flex;
     flex-direction: row;
@@ -353,7 +359,7 @@ footer{
 }
 
 
-/* screen resizing */
+/* screen resizing - MEDIA QUERY*/
 
 @media screen and (max-width:1540px){
     #space-div{
@@ -377,7 +383,6 @@ footer{
         margin:0;
         border-bottom: 0;
         text-decoration: underline;
-        /* font-size:20px; */
         line-height: 20px;
     }
     #nav-div-1{
@@ -392,14 +397,7 @@ footer{
         margin:0;
         border-bottom: 0;
         text-decoration: underline;
-        /* font-size:20px; */
         line-height: 20px;
-        /* text-decoration: underline; */
-        /* border-bottom: 3px solid var(--blue);
-        margin-top:50px;
-        margin-bottom:50px;
-        margin-left: 70px;
-        margin-right: 70px; */
     }
     #logo-div{
         display: flex;
@@ -475,7 +473,6 @@ footer{
         margin:0;
         border-bottom: 0;
         text-decoration: underline;
-        /* font-size:20px; */
         line-height: 20px;
     }
     #nav-div-1{
@@ -490,14 +487,7 @@ footer{
         margin:0;
         border-bottom: 0;
         text-decoration: underline;
-        /* font-size:20px; */
         line-height: 20px;
-        /* text-decoration: underline; */
-        /* border-bottom: 3px solid var(--blue);
-        margin-top:50px;
-        margin-bottom:50px;
-        margin-left: 70px;
-        margin-right: 70px; */
     }
     #logo-div{
         display: flex;
@@ -528,47 +518,46 @@ footer{
         border-right: 0px;
         justify-content: center;
     }
-.item-1{
-    margin: 2px;
-    width: 480px;
-    height: 480px;
-}
-.container{
-    display:flex;
-    flex-direction:column;
-    min-height:1000px;
-    justify-content: space-evenly;
-}
-#row-1{
-    margin: 0px;
-    display: flex;
-    flex-direction: column;
-    justify-content:center;
-    flex-basis: 33.34%;
-}
+    .item-1{
+        margin: 2px;
+        width: 480px;
+        height: 480px;
+    }
+    .container{
+        display:flex;
+        flex-direction:column;
+        min-height:1000px;
+        justify-content: space-evenly;
+    }
+    #row-1{
+        margin: 0px;
+        display: flex;
+        flex-direction: column;
+        justify-content:center;
+        flex-basis: 33.34%;
+    }
 
-.item-2 , .item-3 , .item-4 , .item-5{
-    margin: 2px;
-    border: 5px solid var(--blue);
-    width: 480px;
-    height: 480px;
+    .item-2 , .item-3 , .item-4 , .item-5{
+        margin: 2px;
+        border: 5px solid var(--blue);
+        width: 480px;
+        height: 480px;
+    }
+    #logo-nav-div, #contact-links, footer{
+        flex-direction:column;
+        
+    }
 
-}
-#logo-nav-div, #contact-links, footer{
-    flex-direction:column;
-    
-}
-
-#contactMe{
-    display:flex;
-    flex-direction: column;
-    justify-content:center;
-    text-align:center;
+    #contactMe{
+        display:flex;
+        flex-direction: column;
+        justify-content:center;
+        text-align:center;
         width:100%;
         font-size:40px;
         padding:0px;
-    
-    }
+        
+        }
     #contact-links{
         border:0px;
     }
