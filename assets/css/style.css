@@ -21,7 +21,7 @@ body{
     flex-direction: column;
     width: 100%;
     min-height: 300px;
-    background-image: url("/Users/darrenmedrano/bootcamp/assets/background.png");
+    background-image: url("https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/79731568097599.5b50bca477735.jpg");
     margin: auto;
 
 }
@@ -202,7 +202,7 @@ body{
     height:500px;
     margin-left:20px;
     border: 5px solid var(--blue);
-    background-image: url("/Users/darrenmedrano/Desktop/bootcamp-UTA/challenges/UTA-bootcamp-challenge-2/assets/images/tower.png");
+    background-image: url("https://i.pcmag.com/imagery/articles/00l8p1iqqfNP3HRG3TtTgXl-1..v1587974089.jpg");
 
 
 }
@@ -245,20 +245,20 @@ body{
     margin-bottom:20px;
     min-height:130px;
 
-background-image: url("/Users/darrenmedrano/Desktop/bootcamp-UTA/challenges/UTA-bootcamp-challenge-2/assets/images/arch.png");
+background-image: url("https://akm-img-a-in.tosshub.com/indiatoday/images/story/202212/coding_reuters-one_one.jpg?VersionId=OJJ6zyKqFviae5hm3BsH7Z1rMoYuPdkU");
 }
 .item-3{
     min-height:130px;
-background-image: url("/Users/darrenmedrano/Desktop/bootcamp-UTA/challenges/UTA-bootcamp-challenge-2/assets/images/city.png");
+background-image: url("https://vportal.net/wp-content/uploads/2022/09/Learn-Programming-In-A-Fun-Way-758x398-1.jpg");
 }
 .item-4{
     margin-bottom:20px;
     min-height:130px;
-background-image: url("/Users/darrenmedrano/Desktop/bootcamp-UTA/challenges/UTA-bootcamp-challenge-2/assets/images/tree.png");
+background-image: url("https://content.techgig.com/photo/88206199/5-Tips-to-make-your-code-quality-better-and-more-efficient.jpg");
 }
 .item-5{
     min-height:130px;
-background-image: url("/Users/darrenmedrano/Desktop/bootcamp-UTA/challenges/UTA-bootcamp-challenge-2/assets/images/dog.png");
+background-image: url("https://assets.entrepreneur.com/content/3x2/2000/why-learned-code-how-can-3-months.jpg?auto=webp&quality=95&crop=16:9&width=675");
 }
 
 .item-1 h2 {
