@@ -1,134 +1,66 @@
 :root{
-    --blue:rgb(75, 181, 170);
+    --blue:rgb(4, 253, 228);
     --grey:#333;
 }
-* {
+body{
+    box-sizing: border-box;
     margin: 0px;
     padding: 0px;
-    font-family: arial;
-    box-sizing: border-box;
-}
-body{
-    display: flex;
-    flex-direction: column;
-
+    display: grid;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
-/* header/ navigation bar */
-
-#header{ 
-    display:flex;
-    flex-direction: column;
-    width: 100%;
-    min-height: 300px;
-    background-image: url("https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/79731568097599.5b50bca477735.jpg");
-    margin: auto;
-
-}
-
-#logo-nav-div{
-    display: flex;
-    flex-direction: row;
-    width: 100%;
-    min-height: 100px;
-    background-color:var(--grey);
-}
-#logo-div{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
+footer{
+    display: grid;
+    grid-template-rows: auto;
+    grid-template-columns: 1fr 3fr 1fr;
     margin-top:20px;
     margin-bottom:20px;
+    max-width:100%;   
+}
+.wrapper{ 
+    display: flex;
+    flex-direction:column;
+    margin:0;
+    max-width:100%; 
+    min-height: 300px;
+    background-image: url("https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/79731568097599.5b50bca477735.jpg");
+}
+
+.logo-nav{
+    min-height: 100px;
+    background-color:var(--grey);
+    display: flex;
+    flex-direction: row;
+    width:100%;
+    flex-wrap: wrap;
+}
+.logo{
     font-size:40px;
-    padding-left: 100px;
-    padding-right: 100px;
-    flex-basis: 50%;
-    color: var(--grey);
-    background-color: var(--blue);
-}
-#space-div{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    flex-basis: 50%;
-    background-color:var(--grey);
-    color: var(--blue);
-    font-size:20px;
-    line-height: 20px;
-    text-decoration: underline;
-    margin-left: 400px;
-    margin-right:400px;
-}
-#nav-div-1{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
-    flex-basis: 50%;
-    background-color:var(--grey);
-    color: var(--blue);
-    font-size:20px;
-    line-height: 20px;
-    text-decoration: none;
-    padding-bottom: 5px;
-    border-bottom: 5px solid var(--blue);
-    margin-top:50px;
-    margin-bottom:50px;
-    margin-left: 100px;
-    margin-right: 10px;
-}
-#nav-div{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
-    flex-basis: 50%;
-    background-color:var(--grey);
-    color: var(--blue);
-    font-size:20px;
-    line-height: 20px;
-    text-decoration: none;
-    padding-bottom: 5px;
-    border-bottom: 5px solid var(--blue);
-    margin-top:50px;
-    margin-bottom:50px;
-    margin-left: 10px;
-    margin-right: 10px;
-
-}
-
-#nav-div-4{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
-    flex-basis: 50%;
-    background-color:var(--grey);
-    color: var(--blue);
-    font-size:20px;
-    line-height: 20px;
-    padding-bottom: 5px;
-    border-bottom: 5px solid var(--blue);
-    margin-top:50px;
-    margin-bottom:50px;
-    margin-left: 10px;
-    margin-right: 65px;
-}
-#nav-div-1:hover, #nav-div:hover, #nav-div-4:hover{
     color:var(--grey);
     background-color:var(--blue);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    flex-basis: 20%;
+    margin-top: 10px;
+    margin-bottom:10px;
 
 }
-#nav-div:hover, #nav-div-1:hover{
-    color:var(--grey);
-    background-color:var(--blue);
-
+.nav{
+    display:flex;
+    flex-direction: row;
+    justify-content: end;
+    align-items: center;
+    flex-basis: 80%;
+    margin-right: px;
 }
-#logo-div:hover{
-    color:var(--blue);
-    background-color:var(--grey);
+.nav > a{
+    font-size:20px;
+    color: var(--blue);
+    margin:7px;
+    padding:7px;
+    line-height: 30px;
 }
 .bannerText {
     display: flex;
@@ -143,125 +75,86 @@ body{
     margin-right:65px;
 }
 
-
-/*main - ABOUT ME SECTION */
-
-  #article{
-    display:flex;
-    flex-direction: row;
-    width: 100%;
-    min-height: 100px;
-    margin: auto;
-    margin-top:20px;
-
-}
-#label:hover, #paragraph:hover, #label-2:hover, #contactMe:hover{
-    color: var(--blue);
-}
-
-#label, #label-2, #space-div-2 {
-    display: flex;
-    flex-direction: row;
-    justify-content: end;
-    text-align:right;
-    flex-basis:25%;
-    font-size:40px;
-}
-#label, #label-2{
-    padding-right:20px;
-    color:var(--grey);
-    border-right: 5px solid var(--grey);
-}
- #paragraph{
-    padding-left:20px;
-    color: var(--grey);
-}
-
-
-/* photo gallery */
-
-#main-photo{
-    display:flex;
-    flex-direction: row;
-    width: 100%;
-    margin: auto;
-    margin-top:20px;
-
-}
-#space-div-3 {
-    display: flex;
-    flex-direction: row;
-    justify-content: end;
-    text-align:right;
-    flex-basis:6.9%;
-    font-size:40px;
-
-}
-  .item-1 {
-    width:910px;
-    height:500px;
-    margin-left:20px;
-    border: 5px solid var(--blue);
-    background-image: url("https://i.pcmag.com/imagery/articles/00l8p1iqqfNP3HRG3TtTgXl-1..v1587974089.jpg");
-
-
-}
 .container{
-    display:flex;
-    flex-direction:row;
-    min-height:300px;
-    justify-content: space-evenly;
-}
-
-#space-div-4{
-    border-right: 5px solid var(--grey);
-    flex-basis: 44.5%;
-    margin-left:11px;
-    margin-right:10px;
-    border-right: 5px solid var(--grey);
-}
-#space-div-5{
-    flex-basis: 25%;
-    margin-left:10px;
-    margin-right:10px;
-}
-#row-1{
+    display: grid;
+    grid-template-rows: auto;
+    grid-template-columns: 1fr 3fr 1fr;
     margin-top:20px;
-    margin-left:10px;
-    margin-right:10px;
-    display: flex;
-    flex-direction: column;
-    justify-content:center;
-    flex-basis: 33.34%;
+    margin-bottom:20px;
+    max-width:100%;
+    margin-left:auto;
+    margin-right:auto;
 }
-
-.item-2 , .item-3 , .item-4 , .item-5{
-    border: 5px solid var(--blue);
-
-
+.contact,
+.item-1{
+    padding:10px;
+    font-size:40px;
+    text-align: right;
+    color: var(--grey);
+    border-right: 10px solid var(--grey);
 }
 
 .item-2{
-    margin-bottom:20px;
-    min-height:130px;
-
-background-image: url("https://akm-img-a-in.tosshub.com/indiatoday/images/story/202212/coding_reuters-one_one.jpg?VersionId=OJJ6zyKqFviae5hm3BsH7Z1rMoYuPdkU");
+    padding: 10px;
 }
-.item-3{
-    min-height:130px;
-background-image: url("https://vportal.net/wp-content/uploads/2022/09/Learn-Programming-In-A-Fun-Way-758x398-1.jpg");
+
+
+.container-2{
+    display: grid;
+    grid-template-rows: auto;
+    grid-template-columns: 1fr 3fr 1fr;
+    margin-top:20px;
+    margin-bottom:20px;
+    max-width:100%;
+    margin-left:auto;
+    margin-right:auto;
+    min-height:1000px;
 }
 .item-4{
-    margin-bottom:20px;
-    min-height:130px;
-background-image: url("https://content.techgig.com/photo/88206199/5-Tips-to-make-your-code-quality-better-and-more-efficient.jpg");
-}
-.item-5{
-    min-height:130px;
-background-image: url("https://assets.entrepreneur.com/content/3x2/2000/why-learned-code-how-can-3-months.jpg?auto=webp&quality=95&crop=16:9&width=675");
+    padding:10px;
+    font-size:40px;
+    text-align: right;
+    color: var(--grey);
+    border-right: 10px solid var(--grey);
 }
 
-.item-1 h2 {
+.item-5{
+    padding: 10px;
+    display: grid;
+    grid-template-rows: 5fr 3fr;
+    grid-template-columns: auto;
+}
+.sub-photos{
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+}
+
+.main-photo, .photo-2, .photo-3, .photo-4, .photo-5{
+    border: 10px solid var(--blue);
+    margin:10px;
+
+}
+.main-photo{
+    background-image: url("https://i.pcmag.com/imagery/articles/00l8p1iqqfNP3HRG3TtTgXl-1..v1587974089.jpg");
+}
+.photo-2{
+    background-image: url("https://akm-img-a-in.tosshub.com/indiatoday/images/story/202212/coding_reuters-one_one.jpg?VersionId=OJJ6zyKqFviae5hm3BsH7Z1rMoYuPdkU");
+
+}
+.photo-3{
+    background-image: url("https://vportal.net/wp-content/uploads/2022/09/Learn-Programming-In-A-Fun-Way-758x398-1.jpg");
+
+}
+.photo-4{
+    background-image: url("https://content.techgig.com/photo/88206199/5-Tips-to-make-your-code-quality-better-and-more-efficient.jpg");
+
+}
+.photo-5{
+    background-image: url("https://assets.entrepreneur.com/content/3x2/2000/why-learned-code-how-can-3-months.jpg?auto=webp&quality=95&crop=16:9&width=675");
+}
+
+.main-photo h2 {
     font-size: 150%;
     width: 20%;
     border: 2px solid var(--blue);
@@ -272,11 +165,11 @@ background-image: url("https://assets.entrepreneur.com/content/3x2/2000/why-lear
     margin-right: auto;
     padding: 5px;
 }
-.item-1 h2 > a, .item-2 h2 > a, .item-3 h2 > a,
-.item-4 h2 > a, .item-5 h2 > a{
+.main-photo h2 > a, .photo-2 h2 > a, .photo-3 h2 > a,
+.photo-4 h2 > a, .photo-5 h2 > a{
     font-size: 16px;
 }
-.item-2 h2, .item-3 h2, .item-4 h2, .item-5 h2 {
+.photo-2 h2, .photo-3 h2, .photo-4 h2, .photo-5 h2 {
     font-size: 150%;
     width: 40%;
     border: 2px solid var(--blue);
@@ -287,286 +180,67 @@ background-image: url("https://assets.entrepreneur.com/content/3x2/2000/why-lear
     margin-right: auto;
     padding: 5px;
 }
-.item-3 h2{
-    font-size: 150%;
-    width: 45%;
-    border: 2px solid var(--blue);
-    position: relative;
-    bottom: -35px;
-    background-color: var(--blue);
-    margin-left: 0;
-    margin-right: auto;
-    padding: 5px;
-}
 
-.item-1:hover,.item-1:hover h2 {
-    box-shadow: inset 0px 0px 8px  var(--blue), 0 0 15px  var(--blue);
-}
-
-.item-2:hover, .item-2:hover h2{
-    box-shadow: inset 0px 0px 8px  var(--blue), 0 0 15px  var(--blue);
-}
-.item-3:hover, .item-3:hover h2{
-    box-shadow: inset 0px 0px 8px  var(--blue), 0 0 15px  var(--blue);
-}
-.item-4:hover, .item-4:hover h2{
-    box-shadow: inset 0px 0px 8px  var(--blue), 0 0 15px  var(--blue);
-}
-.item-5:hover, .item-5:hover h2{
-    box-shadow: inset 0px 0px 8px  var(--blue), 0 0 15px  var(--blue);
-}
-
-
-/* footer / contact me */
-footer{
-    display:flex;
-    flex-direction: row;
-    min-height: 100px;
-    width: 100%;
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 20px;
-    margin-top: 20px;
-
-}
-#contactMe{
-    width:603px;
-    font-size:40px;
-    text-align: right;
-    padding:20px;
+.contact-links{
     color: var(--grey);
-
-}
-#contact-links{
+    font-size:30px;
     display: flex;
     flex-direction: row;
-    flex-basis:50%;
+    flex-wrap: wrap;
     align-items: center;
-    font-size:20px;
-    border-left: 5px solid var(--grey);
-
+    justify-content:space-around;
 }
-#links{
-    margin:auto;
-    text-decoration: none;
+.contact-links > a {
     color: var(--grey);
-    border-bottom: 5px solid var(--grey);
-    padding-bottom:5px;
 }
-#links:hover, #links:hover{
+
+.nav > a:hover{
+    color:var(--grey);
+    background-color:var(--blue);
+
+}
+
+.logo:hover{
     color:var(--blue);
-    border-bottom: 5px solid var(--blue);
+    background-color:var(--grey);
+}
+.main-photo:hover,.photo-1:hover, .photo-2:hover, .photo-3:hover, .photo-4:hover, .photo-5:hover,
+.main-photo h2:hover,.photo-1 h2:hover, .photo-2 h2:hover, .photo-3 h2:hover, .photo-4 h2:hover, .photo-5 h2:hover {
+    box-shadow: inset 0px 0px 40px  var(--blue), 0 0 40px  var(--blue);
 }
 
 
-/* screen resizing - MEDIA QUERY*/
-
-@media screen and (max-width:1540px){
-    #space-div{
-        display: none;
-    }
-    #nav-div{
-        font-size: 18px;
-        margin:0;
-        border-bottom: 0;
-        text-decoration: underline;
-    }
-    #nav-div-4{
+@media only screen and (max-width:768px){
+    body, footer, .container, .container-2, .item-5, .sub-photos{
         display: flex;
-        flex-direction: row;
-        justify-content: space-around;
-        align-items: center;
-        flex-basis: 50%;
-        background-color:var(--grey);
-        color: var(--blue);
-        font-size: 18px;
-        margin:0;
-        border-bottom: 0;
-        text-decoration: underline;
-        line-height: 20px;
-    }
-    #nav-div-1{
-        display: flex;
-        flex-direction: row;
-        justify-content: space-around;
-        align-items: center;
-        flex-basis: 50%;
-        background-color:var(--grey);
-        color: var(--blue);
-        font-size: 18px;
-        margin:0;
-        border-bottom: 0;
-        text-decoration: underline;
-        line-height: 20px;
-    }
-    #logo-div{
-        display: flex;
-        flex-direction: row;
-        justify-content: space-around;
-        align-items: center;
-        margin-top:20px;
-        margin-bottom:20px;
-        font-size:40px;
-        padding-left: 50px;
-        padding-right: 50px;
-        flex-basis: 50%;
-        color: var(--grey);
-        background-color: var(--blue);
-    }
-    #main-photo{
-        display:flex;
         flex-direction: column;
-        width: 100%;
-        margin: auto;
-        margin-top:20px;
-    
     }
-    #label-2{
-
-        padding-right:0px;
-        border-right: 0px;
-        justify-content: center;
-    }
-    .item-1{
-        margin-left: 5px;
-        width: 700px;
-        height: 500px;
-    }
-    #space-div-4{
-        display:none;
-    }
-    .item-2 , .item-3 , .item-4 , .item-5{
-        margin:5px;
-        border: 5px solid var(--blue);
-        width: 480px;
-        height: 480px;
-    
-    }
-}
-
-@media screen and (max-width:600px){
-    #space-div, #space-div-3, #space-div-4, #space-div-5{
-        display: none;
-    }
-    #article, #label{
-        flex-direction:column;
+    .item-1, .item-4, .contact{
         text-align:center;
-        width:100%;
-        padding:0px;
-        border:0;
+        border-right: 0px;
+        border-bottom: 10px solid var(--grey);
     }
-    #nav-div{
-        font-size: 18px;
-        margin:0;
-        border-bottom: 0;
-        text-decoration: underline;
-    }
-    #nav-div-4{
+    .item-5{
         display: flex;
-        flex-direction: row;
-        justify-content: space-around;
-        align-items: center;
-        flex-basis: 50%;
-        background-color:var(--grey);
-        color: var(--blue);
-        font-size: 18px;
-        margin:0;
-        border-bottom: 0;
-        text-decoration: underline;
-        line-height: 20px;
-    }
-    #nav-div-1{
-        display: flex;
-        flex-direction: row;
-        justify-content: space-around;
-        align-items: center;
-        flex-basis: 50%;
-        background-color:var(--grey);
-        color: var(--blue);
-        font-size: 18px;
-        margin:0;
-        border-bottom: 0;
-        text-decoration: underline;
-        line-height: 20px;
-    }
-    #logo-div{
-        display: flex;
-        flex-direction: row;
-        justify-content: space-around;
-        align-items: center;
-        margin-top:20px;
-        margin-bottom:20px;
-        font-size:40px;
-        padding-left: 50px;
-        padding-right: 50px;
-        flex-basis: 50%;
-        color: var(--grey);
-        background-color: var(--blue);
-    }
-
-    #main-photo{
-        display:flex;
         flex-direction: column;
-        width: 100%;
-        margin: auto;
-        margin-top:20px;
+        width:auto;
+        margin:auto;
+    }
+    .main-photo, .photo-2, .photo-3, .photo-4, .photo-5{
+        border: 10px solid var(--blue);
+        margin:0px;
+        margin-top:5px;
+        margin-bottom:5px;
+        width: 440px;
+        height: 440px;
     
     }
-    #label-2{
-
-        padding-right:0px;
-        border-right: 0px;
-        justify-content: center;
-    }
-    .item-1{
-        margin: 2px;
-        width: 480px;
-        height: 480px;
-    }
-    .container{
-        display:flex;
-        flex-direction:column;
-        min-height:1000px;
-        justify-content: space-evenly;
-    }
-    #row-1{
-        margin: 0px;
-        display: flex;
-        flex-direction: column;
-        justify-content:center;
-        flex-basis: 33.34%;
-    }
-
-    .item-2 , .item-3 , .item-4 , .item-5{
-        margin: 2px;
-        border: 5px solid var(--blue);
-        width: 480px;
-        height: 480px;
-    }
-    #logo-nav-div, #contact-links, footer{
-        flex-direction:column;
-        
-    }
-
-    #contactMe{
-        display:flex;
-        flex-direction: column;
-        justify-content:center;
-        text-align:center;
-        width:100%;
-        font-size:40px;
-        padding:0px;
-        
-        }
-    #contact-links{
-        border:0px;
-    }
-    .item-1 h2 , .item-2 h2, .item-3 h2 , .item-4 h2 , .item-5 h2{
+    .main-photo h2 , .photo-2 h2, .photo-3 h2 , .photo-4 h2 , .photo-5 h2{
         font-size: 150%;
         width: 40%;
         border: 2px solid var(--blue);
         position: relative;
-        bottom: -400px;
+        bottom: -300px;
         background-color: var(--blue);
         margin-left: 0;
         margin-right: auto;
